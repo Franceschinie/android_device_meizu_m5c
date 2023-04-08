@@ -44,7 +44,7 @@
 
 /* use nvram */
 #include "CFG_BT_File.h"
-//#include "CFG_BT_Default.h"
+#include "CFG_BT_Default.h"
 #include "CFG_file_lid.h"
 #include "libnvram.h"
 
