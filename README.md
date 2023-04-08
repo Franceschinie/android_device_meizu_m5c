@@ -31,6 +31,7 @@ brunch m5c
 
 # Acknowledgements
 
+* XRed_CubeX
 * seluce
 * iodine71
 * olegsvs
