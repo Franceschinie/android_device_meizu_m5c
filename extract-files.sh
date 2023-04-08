@@ -1,7 +1,7 @@
 #!/bin/bash
 
-export DEVICE=DINOSAUR
-export VENDOR=CUBOT
+export DEVICE=m5c
+export VENDOR=meizu
 
 if [ $# -eq 0 ]; then
   SRC=adb

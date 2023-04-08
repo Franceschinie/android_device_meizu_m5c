@@ -19,6 +19,6 @@
 
 #define BTA_DISABLE_DELAY 1000 /* in milliseconds */
 
-#define BTM_DEF_LOCAL_NAME   "CUBOT DINOSAUR  "
+#define BTM_DEF_LOCAL_NAME   "Meizu M5c  "
 
 #endif

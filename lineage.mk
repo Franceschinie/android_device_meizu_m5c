@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := device/CUBOT/DINOSAUR
+LOCAL_PATH := device/meizu/meizu
 
 # Inherit some common Lineage OS stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
@@ -25,23 +25,23 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/CUBOT/DINOSAUR/lineage_DINOSAUR.mk)
+$(call inherit-product, device/meizu/m5c/lineage_m5c.mk)
 
 # Inherit device configuration
-#$(call inherit-product, $(LOCAL_PATH)/device_DINOSAUR.mk)
-#$(call inherit-product-if-exists, vendor/CUBOT/DINOSAUR/DINOSAUR-vendor.mk)
+#$(call inherit-product, $(LOCAL_PATH)/device_m5c.mk)
+#$(call inherit-product-if-exists, vendor/meizu/m5c/m5c-vendor.mk)
 
 # Device branding
-PRODUCT_RELEASE_NAME := DINOSAUR
-PRODUCT_DEVICE := DINOSAUR
-PRODUCT_NAME := lineage_DINOSAUR
-PRODUCT_BRAND := CUBOT
-PRODUCT_MANUFACTURER := CUBOT
-PRODUCT_MODEL := CUBOT DINOSAUR
+PRODUCT_RELEASE_NAME := m5c
+PRODUCT_DEVICE := m5c
+PRODUCT_NAME := lineage_m5c
+PRODUCT_BRAND := Meizu
+PRODUCT_MANUFACTURER := Meizu
+PRODUCT_MODEL := Meizu m5c
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=CUBOT/x5623_h6013_cubot/x5623_h6013_cubot:6.0/MRA58K/1467902799:user/release-keys \
-PRIVATE_BUILD_DESC="x5623_h6013_cubot-user 6.0 MRA58K 1502939649 release-keys"
+    BUILD_FINGERPRINT=meizu/x5623_h6013_meizu/x5623_h6013_meizu:6.0/MRA58K/1467902799:user/release-keys \
+PRIVATE_BUILD_DESC="x5623_h6013_meizu-user 6.0 MRA58K 1502939649 release-keys"
 
 # SuperUser
 WITH_SU := false

@@ -16,7 +16,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE), DINOSAUR)
+ifeq ($(TARGET_DEVICE), m5c)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 

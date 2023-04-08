@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := device/CUBOT/DINOSAUR
+LOCAL_PATH := device/meizu/m5c
 
 BOARD_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 BOARD_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
@@ -24,7 +24,7 @@ BOARD_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
 
 # CMHW
 BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS += device/CUBOT/DINOSAUR/cmhw
+BOARD_HARDWARE_CLASS += device/meizu/m5c/cmhw
 
 # build old-style zip files (required for ota updater)
 BLOCK_BASED_OTA := false
@@ -105,8 +105,8 @@ BOARD_KERNEL_CMDLINE = bootopt=64S3,32N2,64N2 androidboot.selinux=permissive
 #BOARD_KERNEL_OFFSET = 0x00080000
 TARGET_USES_64_BIT_BINDER := true
 endif
-#BOARD_MKBOOTIMG_ARGS := --kernel_offset $(BOARD_KERNEL_OFFSET) --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_TAGS_OFFSET) --board DINOSAUR_V0
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_TAGS_OFFSET) --board CUBOT_DINOSAUR
+#BOARD_MKBOOTIMG_ARGS := --kernel_offset $(BOARD_KERNEL_OFFSET) --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_TAGS_OFFSET) --board m5c_V0
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_TAGS_OFFSET) --board mt6737
 
 BOARD_CUSTOM_BOOTIMG := true
 
@@ -123,7 +123,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12353781760
 BOARD_FLASH_BLOCK_SIZE := 4096
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := max,DINOSAUR,CUBOT_DINOSAUR,cubot_max
+TARGET_OTA_ASSERT_DEVICE := m5c,m710h
 
 # Disable memcpy opt (for audio libraries)
 TARGET_CPU_MEMCPY_OPT_DISABLE := true
@@ -160,7 +160,7 @@ BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 WITH_SU := false
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/CUBOT/DINOSAUR/ril
+BOARD_RIL_CLASS := ../../../device/meizu/m5c/ril
 
 BOARD_DISABLE_HW_ID_MATCH_CHECK := true
 
@@ -207,7 +207,6 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
-TW_DINOSAUR_BRIGHTNESS := 255
 TW_EXCLUDE_SUPERSU := true
 TW_INCLUDE_FB2PNG := true
 TW_NO_CPU_TEMP := true

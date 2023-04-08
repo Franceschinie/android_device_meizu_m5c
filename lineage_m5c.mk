@@ -22,5 +22,5 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-$(call inherit-product, device/CUBOT/DINOSAUR/device_DINOSAUR.mk)
-$(call inherit-product-if-exists, vendor/CUBOT/DINOSAUR/DINOSAUR-vendor.mk)
+$(call inherit-product, device/meizu/m5c/device_m5c.mk)
+$(call inherit-product-if-exists, vendor/meizu/m5c/m5c-vendor.mk)
