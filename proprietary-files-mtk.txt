@@ -30,7 +30,6 @@ bin/akmd8975
 bin/ami304d
 bin/bmm050d
 bin/geomagneticd
-bin/mc6470d
 bin/memsicd
 bin/memsicd3416x
 bin/msensord
@@ -134,7 +133,6 @@ lib{,64}/libcam_platform.so
 lib{,64}/libcam.utils.sensorlistener.so
 lib{,64}/libcam_utils.so
 lib{,64}/libcam.utils.so
-lib{,64}/libdngop.so
 lib{,64}/libfeatureiodrv.so
 lib{,64}/libfeatureio.so
 lib{,64}/libfile_op.so
