@@ -1,32 +1,32 @@
-# LineageOS 14.1 device tree for CUBOT DINOSAUR 
+# LineageOS 14.1 device tree for Meizu M5c 
 
-CUBOT DINOSAUR
+Meizu M5c
 ==============
 
 Basic   | Spec Sheet
 -------:|:-------------------------
-CPU     | 1.3GHz Quad-Core MT6735A
+CPU     | 1.3GHz Quad-Core MT6737
 GPU     | Mali-T720
-Memory  | 3GB RAM
+Memory  | 2GB RAM
 Shipped Android Version | 6.0
 Storage | 16GB
-Battery | 4150 mAh
-Display | 5.5" 720 x 1280 px
-Camera  | Front: 5.0MPx, Back 13MPx, LED Flash
+Battery | 3000 mAh
+Display | 5" 720 x 1280 px
+Camera  | Front: 5.0MPx, Back 8MPx, LED Flash
 
-![DEXP](https://github.com/h0sch180/android_device_cubot_dinosaur/blob/cm-14.1/cubot_dinosaur.jpg "Cubot Dinosaur")
+![m5c](https://cdn-files.kimovil.com/default/0001/71/thumb_70651_default_big.jpeg "Meizu M5c")
 
 # Instructions
 ```
 repo init -u git://github.com/LineageOS/android.git -b cm-14.1
 repo sync
-git https://github.com/h0sch180/android_device_cubot_dinosaur.git -b cm-14.1 device/CUBOT/DINOSAUR
-./device/CUBOT/DINOSAUR/patches_mtk/apply-patches.sh
+git https://github.com/XRedCubeX/android_device_meizu_m5c.git -b cm-14.1 device/meizu/m5c
+./device/meizu/m5c/patches_mtk/apply-patches.sh
 . build/envsetup.sh
 export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx8g"
 ./prebuilts/sdk/tools/jack-admin kill-server
 ./prebuilts/sdk/tools/jack-admin start-server
-brunch DINOSAUR
+brunch m5c
 ```
 
 # Acknowledgements
