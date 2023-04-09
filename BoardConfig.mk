@@ -51,8 +51,7 @@ ifeq ($(ODEX),false)
 endif
 
 # Platform
-TARGET_BOARD_PLATFORM := mt6735
-TARGET_NO_FACTORYIMAGE := true
+TARGET_BOARD_PLATFORM := mt6737m
 
 # Architecture (32bit / 64bit)
 #FORCE_32_BIT = true
@@ -84,7 +83,7 @@ endif
 #TARGET_SUPPORTS_64_BIT_APPS := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := mt6735
+TARGET_BOOTLOADER_BOARD_NAME := mt6737m
 
 # Kernel
 TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/rootdir/kernel
