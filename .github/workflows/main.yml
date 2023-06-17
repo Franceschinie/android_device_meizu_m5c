@@ -13,7 +13,7 @@ jobs:
         - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
         - run: sudo apt update && sudo apt update -y
         - run: sudo apt install repo -y
-        - run: repo init -u git://github.com/LineageOS/android.git -b cm-14.1
+        - run: repo init -u https://github.com/LineageOS/android.git -b cm-14.1
         - run: repo sync
         - run: git https://github.com/XRedCubeX/android_device_meizu_m5c.git -b cm-14.1 device/meizu/m5c
         - run: ./device/meizu/m5c/patches_mtk/apply-patches.sh
