@@ -1,0 +1,24 @@
+name: Push
+
+on:
+  push:
+    branches: [ "develop", "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+        - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
+        - run: sudo apt update && sudo apt update -y
+        - run: sudo apt install repo -y
+        - run: repo init -u git://github.com/LineageOS/android.git -b cm-14.1
+        - run: repo sync
+        - run: git https://github.com/XRedCubeX/android_device_meizu_m5c.git -b cm-14.1 device/meizu/m5c
+        - run: ./device/meizu/m5c/patches_mtk/apply-patches.sh
+        - run: . build/envsetup.sh
+        - run: export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx8g"
+        - run: ./prebuilts/sdk/tools/jack-admin kill-server
+        - run: ./prebuilts/sdk/tools/jack-admin start-server
+        - run: brunch m5c
